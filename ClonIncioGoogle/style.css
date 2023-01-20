@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Arial", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header{
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  color: black;
+}
+
+.navegador{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0px 30px 0px;
+  font-size: .9rem;
+}
+.navegador a{
+  text-decoration: none;
+  color: inherit;
+}
+.navegador #avatar{
+  width: 2.3rem;
+  height: 2.3rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  margin-top: 88px;
+}
+.container-search{
+  padding: 5px;
+}
+
+.bar-search{
+  display: grid;
+  grid-template-columns: 30px 350px 30px;
+  grid-template-rows: 32px;
+  grid-template-areas: " lupa caja microfono";
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  position: relative;
+
+}
+.lupa{
+  grid-area: lupa;
+  border: #dfe1e5 solid 1px;
+  border-right: none;
+  border-radius: 100px 0px 0px 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caja{
+  grid-area: caja;
+  border-top: #dfe1e5 solid 1px;
+  border-bottom: #dfe1e5 solid 1px;
+  height: 100%;
+}
+.caja #busqueda{
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.microfono{
+  grid-area: microfono;
+  border: #dfe1e5 solid 1px;
+  border-left: none;
+  border-radius: 0px 100px 100px 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}
+
+.buttons button{
+  color: #5F6368;
+  margin: 11px 4px;;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0 10px;
+  border: none;
+  height: 25px;
+  font-size: 1rem;
+}
+
+footer{
+  background-color: gainsboro;
+  color: #5F6368;
+  display: flex;
+  justify-content: space-between;
+  height: 4em;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.primer-footer{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.segundo-footer{
+  display: flex;
+  flex-direction: row;
+  margin-right: 5px;
+}
+
+footer p{
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+
+}
