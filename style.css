@@ -42,6 +42,7 @@ header{
   display: flex;
   justify-content: center;
   margin-top: 35px;
+  margin-bottom: 15px;
 }
 .container-search{
   width: 530px;
