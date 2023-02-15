@@ -8,7 +8,10 @@
 html {
   font-size: 62.5%;
 }
-
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
 header{
   padding: 6px;
   display: flex;
@@ -29,7 +32,7 @@ header{
   text-decoration: none;
   color: inherit;
 }
-.navegador #avatar{
+.navegador .avatar img{
   width: 2.3rem;
   height: 2.3rem;
   object-fit: cover;
@@ -38,53 +41,50 @@ header{
 .logo{
   display: flex;
   justify-content: center;
-  margin-top: 88px;
+  margin-top: 35px;
 }
 .container-search{
-  padding: 5px;
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 35px;
 }
 
-.bar-search{
-  display: grid;
-  grid-template-columns: 30px 350px 30px;
-  grid-template-rows: 32px;
-  grid-template-areas: " lupa caja microfono";
+main .bar-search{
+  width: 525px;
+  border-radius: 100px;
+  border: 1px solid #dfe1e5;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2px;
-  position: relative;
-
+}
+main .bar-search:hover{
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+main .bar-search input{
+  width: 450px;
+  height: 40px;
+  border: none;
+  outline: none;
 }
 .lupa{
-  grid-area: lupa;
-  border: #dfe1e5 solid 1px;
-  border-right: none;
-  border-radius: 100px 0px 0px 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url("https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_search_48px-512.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  opacity: 0.45;
 }
-.caja{
-  grid-area: caja;
-  border-top: #dfe1e5 solid 1px;
-  border-bottom: #dfe1e5 solid 1px;
-  height: 100%;
-}
-.caja #busqueda{
-  border: none;
-  width: 100%;
-  height: 100%;
-}
+
 .microfono{
-  grid-area: microfono;
-  border: #dfe1e5 solid 1px;
-  border-left: none;
-  border-radius: 0px 100px 100px 0px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 .buttons{
   display: flex;
@@ -104,33 +104,31 @@ header{
 }
 
 footer{
-  background-color: gainsboro;
-  color: #5F6368;
-  display: flex;
-  justify-content: space-between;
-  height: 4em;
   width: 100%;
-  position: fixed;
-  bottom: 0px;
-}
-
-.primer-footer{
-  display: flex;
-  flex-direction: row;
-  margin-left: 5px;
-}
-
-.segundo-footer{
-  display: flex;
-  flex-direction: row;
-  margin-right: 5px;
-}
-
-footer p{
-  margin-right: 5px;
-  margin-left: 5px;
-  display: flex;
+  height: 4em;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
   align-items: center;
   font-size: 1em;
+  background-color: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+}
 
+footer ul{
+  margin: 10px;
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+footer .footer-left{
+  justify-self: left;
+}
+footer .footer-right{
+  justify-self: right;
+}
+footer ul li a{
+  margin: 10px;
+  color: #5f6368;
 }
